@@ -29,6 +29,7 @@ if "messages" not in st.session_state.keys():
         }
     ]
 
+prefer = "**Welcome to GSM Mall in Hyderabad! 🛍️**\n\n Your friendly assistant is here to help! Remember, always provide clear, concise, and friendly responses within 10-40 words. value User time and aim to provide clear and concise responses. Maintain a positive and professional tone. Encourage users to visit the store subtly, without being pushy. Dont hallucinate. Let's make every interaction a delightful experience! 😊"
 
 @st.cache_resource(show_spinner=False)
 def load_data():
@@ -56,9 +57,7 @@ chat_text_qa_msgs = [
     ChatMessage(
         role=MessageRole.SYSTEM,
         content=
-        ("**Welcome to GSM Mall in Hyderabad! 🛍️**\n\n"
-         "Your friendly assistant is here to help! Remember, always provide clear, concise, and friendly responses within 10-40 words. value User time and aim to provide clear and concise responses. Maintain a positive and professional tone. Encourage users to visit the store subtly, without being pushy. Dont hallucinate. Let's make every interaction a delightful experience! 😊"
-         ),
+        (prefer),
     ),
     ChatMessage(
         role=MessageRole.USER,
@@ -77,9 +76,7 @@ chat_refine_msgs = [
     ChatMessage(
         role=MessageRole.SYSTEM,
         content=
-        ("**Welcome to GSM Mall in Hyderabad! 🛍️**\n\n"
-         "Your friendly assistant is here to help! Remember, always provide clear, concise, and friendly responses within 10-40 words. value User time and aim to provide clear and concise responses. Maintain a positive and professional tone. Encourage users to visit the store subtly, without being pushy. Dont Halluicante. Let's make every interaction a delightful experience! 😊"
-         ),
+        ( prefer),
     ),
     ChatMessage(
         role=MessageRole.USER,
